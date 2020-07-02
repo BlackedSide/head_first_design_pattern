@@ -5,15 +5,14 @@ import factory.store.ChicagoStyleStore;
 import factory.store.NYStyleStore;
 import factory.store.PizzaStore;
 
-public class PizzaTestDrive {
+public class Test {
     public static void main(String[] args) {
-        PizzaStore nyStore = new NYStyleStore();
-        PizzaStore chicagoStore = new ChicagoStyleStore();
-
-        Pizza pizza = nyStore.orderPizza("cheese");
+        PizzaStore nyPizzaStore = new NYStyleStore();
+        PizzaStore chicagoPizzaStore = new ChicagoStyleStore();
+        Pizza pizza = nyPizzaStore.orderPizza("cheese");
         System.out.println("Ethan ordered a " + pizza.getName());
 
-        pizza = chicagoStore.orderPizza("cheese");
+        pizza = chicagoPizzaStore.orderPizza("clam");
         System.out.println("Joel ordered a " + pizza.getName());
     }
 }
